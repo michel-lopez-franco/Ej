@@ -1,22 +1,49 @@
 
-.parent {
-    border: 5px solid black;
-    width: 250px;
-    height: 1000px;
-    box-sizing: border-box;
-    position: relative;
+div {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    opacity: .9;
+    background: white;
+    margin-top: -100px;
+    box-shadow: 0 0 5px black;
+    
 }
 
-.container {
-    width: 100px;
-    height: 100px;
-    background: rgb(211, 105, 238);
-    position: fixed; /*relativo a la pantalla, no al padre y no al documento*/
-    right: 0;
-
+div:first-child {
+    background: yellow;
+    z-index: 3;
 }
+
+div:nth-child(2) {
+    background: green;
+    z-index: 2;
+}
+
+div:last-child {
+    background: red;
+    z-index: 1;
+}
+
 
 body {
     background: rgb(73, 152, 243);
-    margin: 50px;
+    padding-top: 200px;
+    
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+
 }
