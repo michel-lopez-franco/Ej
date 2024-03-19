@@ -8,25 +8,16 @@
     sino directamente en el contenedor */
     
     display: flex;
-    /*Genera un contenedor flexible que nos permite alinear a los hijos 
-    de una manera mas eficiente tanto horizontal como vertical tanto
-    cuanto tenemos tamaños desconocidos o dinamicos.
-    
-    # flex-direction: row;
-    le podemos indicar la direccion, por defecto es row*/
-    
-    /*flex-direction: row;
-    flex-direction: column;
-    flex-direction: row-reverse; 
-    flex-direction: column-reverse;*/
-
-    /* flex es unidireccional trabaja o filas o columnas*/
-    /* En grid se trabaja en cuadricula trabajar bidireccionalmente*/
-
-    /*Ejemplo cambiando escritura */ 
     flex-direction: row;
-    direction: rtl; /*direccion de la escritura */
-    writing-mode: vertical-lr; /*direccion de la escritura */
+
+    /*flex-wrap: nowrap;*/
+    /*Por defecto nowrap hace que cada elemento sea mas pequeño */
+
+    flex-wrap: wrap;
+    /*Le indica que si no cabe le damos la opcion de dar un salto de linea */
+
+    width: 204px; /*cambiar a 203 */
+    border: 4px solid black;
 }
 
 .item {
