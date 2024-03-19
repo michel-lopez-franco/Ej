@@ -19,23 +19,29 @@
     box-sizing: border-box;
     background: rgb(184, 0, 240);
     
-    flex-grow: 1;
+    /*flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0; /*cambiar 0 a auto modifica que tengan la misma dimension */ 
+    flex-basis: 0;*/ /*cambiar 0 a auto modifica que tengan la misma dimension */ 
     
-    
+    /*modo abreviado de hacer esto es con  flex: 1;*/
+    flex: 1; /*flex: auto;*/
+    /*El 1 puede funcionar como medida relativa de cuanto espacio tomara cada
+    elemento  */
 }
 
 .item:first-child {
     background: rgb(0, 240, 184);
+    
+}
+
+.item:nth-child(3) {
+    background: rgb(255, 116, 51);
+    flex: 3;
 }
 
 .item:last-child {
     background: rgb(240, 0, 0);
-} 
-
-.item:nth-child(3) {
-    background: rgb(255, 116, 51);
+    flex: 4;
 }
 
 body {
