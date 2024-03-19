@@ -4,17 +4,19 @@ section {
     width: 250px;
     height: 250px;
     box-sizing: border-box;
-    position: static; /*Esta por defecto para posicionar elementos */
+    /*Esta por defecto para posicionar elementos */
+    position: static;
 }
 
 .container {
     width: 100px;
     height: 100px;
     background: rgb(211, 105, 238);
-
+    
 }
 
 body {
     background: rgb(73, 152, 243);
     margin: 50px;
+    
 }
