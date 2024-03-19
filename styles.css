@@ -7,7 +7,7 @@ div {
     background: white;
     margin-top: -100px;
     box-shadow: 0 0 5px black;
-    
+    position: relative;
 }
 
 div:first-child {
@@ -26,9 +26,15 @@ div:last-child {
 }
 
 
+.mazo {
+    margin: 50px;
+    border: 10px solid black;
+    padding: 150px;
+
+}
+
 body {
     background: rgb(73, 152, 243);
-    padding-top: 200px;
     
 }
 
@@ -44,6 +50,6 @@ a {
     text-decoration: none;
     color: black;
     font-family: Arial, sans-serif;
-    font-size: 1.5em;
+    font-size: 1em;
 
 }
