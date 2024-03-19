@@ -1,55 +1,35 @@
 
-div {
-    height: 200px;
-    width: 200px;
-    border: 1px solid black;
+
+
+
+.parent {
+    /*Por default se usa display block y muestra como si fuera una caja */
+    /*Los elementos se apilan despues del salto de linea */
+    display: block;
+}
+
+.item {
+    border: 1px solid #000;
     opacity: .9;
-    background: white;
-    margin-top: -100px;
-    box-shadow: 0 0 5px black;
-    position: relative;
+    height: 100px;
+    width: 100px;
+    background: rgb(184, 0, 240);
+    display: inline; 
+    /*En linea sigue la linea de texto depende del pais 
+    al igual que el texto el height y width no le afecta
+    */
+    
 }
 
-div:first-child {
-    background: yellow;
-    z-index: 3;
+.item:first-child {
+    background: rgb(0, 240, 184);
 }
 
-div:nth-child(2) {
-    background: green;
-    z-index: 2;
-}
-
-div:last-child {
-    background: red;
-    z-index: 1;
-}
-
-
-.mazo {
-    margin: 50px;
-    border: 10px solid black;
-    padding: 150px;
-
-}
+.item:last-child {
+    background: rgb(240, 0, 0);
+}   
 
 body {
     background: rgb(73, 152, 243);
     
-}
-
-h1 {
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 2em;
-
-}
-
-a {
-    text-decoration: none;
-    color: black;
-    font-family: Arial, sans-serif;
-    font-size: 1em;
-
 }
