@@ -31,7 +31,12 @@
 
 .item:first-child {
     background: rgb(0, 240, 184);
-    
+    order: 2;
+}
+
+.item:nth-child(2) {
+    background: rgb(35, 159, 241);
+    flex: 2;
 }
 
 .item:nth-child(3) {
@@ -42,6 +47,7 @@
 .item:last-child {
     background: rgb(240, 0, 0);
     flex: 4;
+    order: 1;
 }
 
 body {
