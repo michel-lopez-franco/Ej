@@ -11,9 +11,8 @@
     width: 100px;
     height: 100px;
     background: rgb(211, 105, 238);
-    position: sticky; /*relativo a la pantalla, no al padre y no al documento*/
-    inset: 0;
-    margin: auto;
+    position: fixed; /*relativo a la pantalla, no al padre y no al documento*/
+    right: 0;
 
 }
 
