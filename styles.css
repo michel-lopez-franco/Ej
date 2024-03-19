@@ -1,0 +1,22 @@
+
+
+.container {
+    width: 150px;
+    height: 150px;
+    background: white;
+    padding: 10px;
+    border: 10px solid black;
+    box-sizing: border-box;
+    font-size: 36px;
+    /*overflow: visible;*/
+    /*overflow: hidden;*/
+    /*overflow: scroll;*/
+    /*overflow: auto;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body {
+    background: rgb(73, 152, 243);
+    margin: 100px;
+}
