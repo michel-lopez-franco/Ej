@@ -3,9 +3,30 @@
 
 
 .parent {
-    /*Por default se usa display block y muestra como si fuera una caja */
-    /*Los elementos se apilan despues del salto de linea */
-    display: block;
+    /*Flex es una propiedad de css que estabrece como deben funcionar el contenedor
+    respecto a sus hijos, flex no lo tenemos que utilizar en los hijos
+    sino directamente en el contenedor */
+    
+    display: flex;
+    /*Genera un contenedor flexible que nos permite alinear a los hijos 
+    de una manera mas eficiente tanto horizontal como vertical tanto
+    cuanto tenemos tamaños desconocidos o dinamicos.
+    
+    # flex-direction: row;
+    le podemos indicar la direccion, por defecto es row*/
+    
+    /*flex-direction: row;
+    flex-direction: column;
+    flex-direction: row-reverse; 
+    flex-direction: column-reverse;*/
+
+    /* flex es unidireccional trabaja o filas o columnas*/
+    /* En grid se trabaja en cuadricula trabajar bidireccionalmente*/
+
+    /*Ejemplo cambiando escritura */ 
+    flex-direction: row;
+    direction: rtl; /*direccion de la escritura */
+    writing-mode: vertical-lr; /*direccion de la escritura */
 }
 
 .item {
@@ -14,10 +35,7 @@
     height: 100px;
     width: 100px;
     background: rgb(184, 0, 240);
-    display: inline; 
-    /*En linea sigue la linea de texto depende del pais 
-    al igual que el texto el height y width no le afecta
-    */
+    
     
 }
 
