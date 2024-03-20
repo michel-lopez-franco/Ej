@@ -1,39 +1,22 @@
 
-.parent {
-    border: 5px solid #000;
-    
-    height: 300px;
-    width: 500px;
-    display: flex;
-    flex-wrap: wrap;
 
-    justify-content: center;
-    align-content: center;
-    gap: 40px;
+.container { 
+    background: lightsalmon;
+    border: 5px solid black;
+    height: 400px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
 }
 
-.item {
-    background: rgb(161, 62, 243) transparent;
-    height: 100px;
-    width: 100px;
-    border: 1px solid #000;
-    
+.container div {
+    background: lightblue;
+    border: 2px solid black;
+    border-radius: 6px;
 }
 
-.item:nth-child(1),
-.item:nth-child(4) {
-    background: rgb(255, 93, 93);
-}
-
-.item:nth-child(2),
-.item:nth-child(5) {
-    background: rgb(246, 43, 253);
-}
-
-.item:nth-child(3),
-.item:nth-child(6) {
-    background: rgb(43, 193, 253);
-}
 
 h1 {
     display: flex;
