@@ -33,7 +33,7 @@
         grid-template-columns: 150px 1fr 1fr 1fr;
         
         grid-template-areas: 
-            "header header header ."
+            "header header header header"
             "sidebar content content content"
             "footer footer footer footer";
     }
@@ -54,6 +54,26 @@
     grid-area: content;
 }
 
+.mymain{
+    display: grid;
+    grid-template-columns: repeat(3,150px);
+    grid-auto-rows: 50px;
+    gap: 16px 8px;
+    align-content: center;
+    
+}
+
+.item {
+    background: lightblue;
+    border: 2px solid blue;
+    border-radius: 6px;
+}
+
+.item:first-child {
+    background: green;
+    justify-self: center;
+}
+
 .container footer {
     background: #f90;
     grid-area: footer;
@@ -61,4 +81,5 @@
 
 body {
     background: lightblue;
+    margin: 0;
 }
