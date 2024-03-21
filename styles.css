@@ -1,98 +1,24 @@
 
 
-
-.container {
-    box-sizing: border-box;
-    background: lightcoral;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(3,minmax(100px,1fr));
-    grid-template-rows: 35px 1fr 100px;
-    min-height: 100vh;
-    grid-template-areas: 
-        "header header sidebar"
-        "content content content"
-        "footer footer footer";
+.pulser {
+    width: 50px;
+    height: 50px;
+    background: #0AF;
+    border-radius: 100%;
+    position: relative;
+    transition-duration: 2s;
 }
 
-
-
-.container header{
-    background: #09f;
-    grid-area: header;
+.pulser:hover {
+    scale: 2;
+    background: purple;
+    box-shadow: 0 0 10px purple;
 }
 
-.container aside {
-    background: #f09;
-    grid-area: sidebar;
-}
-
-.container main {
-    background: #9f0;
-    grid-area: content;
-}
-
-.mymain{
-    display: grid;
-    grid-template-columns: repeat(1,150px);
-    grid-auto-rows: 50px;
-    gap: 16px 8px;
-    /*align-content: center;
-    justify-content: center;*/
-    place-content: center;
-}
-
-.item {
-    background: lightblue;
-    border: 2px solid blue;
-    border-radius: 6px;
-}
-
-.item:first-child {
-    background: green;
-    justify-self: center;
-}
-
-.container footer {
-    background: #f90;
-    grid-area: footer;
-}
-
-
-@media (width > 400px) {
-
-    .container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        
-        grid-template-areas: 
-            "header header header ."
-            "sidebar content content content"
-            "footer footer footer footer";
-    }
-    .mymain {
-        grid-template-columns: repeat(2,150px);
-    }
-
-}
-
-@media (width > 600px) {
-
-    .container {
-        grid-template-columns: 150px 1fr 1fr 1fr;
-        
-        grid-template-areas: 
-            "header header header header"
-            "sidebar content content content"
-            "footer footer footer footer";
-    }
-
-    .mymain {
-        grid-template-columns: repeat(3,150px);
-    }
-    
-}
 
 body {
+    display: grid;
     background: lightblue;
-    margin: 0;
+    place-content: center;
+    min-height: 50vh;
 }
