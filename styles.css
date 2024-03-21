@@ -6,18 +6,51 @@
     background: #0AF;
     border-radius: 100%;
     position: relative;
-    transition: 
-        background 5s linear, 
-        scale 500ms ease-in-out,
-        box-shadow 0.3s, 
-        transform 0.3s ease;
+    animation: move;
+    animation-duration: 3s;
 }
 
 
-.pulser:hover {
-    scale: 2;
-    background: purple;
-    box-shadow: 0 0 10px purple;
+.pulser::after {
+    content: "hola";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0AF;
+    border-radius: 100%;
+    z-index: -1;
+    animation: pulse;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    /*animation-iteration-count: 5;*/
+    animation-delay: 3s;
+    /*animation-iteration-count: infinite;*/
+    animation-iteration-count: 10;
+
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        scale: 2;
+        opacity: .4;
+    }
+    100% {
+        opacity: .6;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(100px);
+    }
 }
 
 
