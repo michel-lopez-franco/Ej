@@ -6,7 +6,12 @@
     background: #0AF;
     border-radius: 100%;
     position: relative;
-    transition-duration: 2s;
+    transition-duration: 500ms;
+    /*transition-property: none;*/
+    transition-property: scale, background;
+    /*transition-timing-function: linear;*/
+    transition-timing-function: cubic-bezier(0.72, 0.25, 0.37, 0.97);
+    /*transition-delay: 1s;*/
 }
 
 .pulser:hover {
