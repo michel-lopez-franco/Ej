@@ -6,26 +6,13 @@
     background: #0AF;
     border-radius: 100%;
     position: relative;
-    transition-duration: 2s;
-    /*transition-property: none;*/
-    /*transition-property: scale;/*, background;*/
-    /*transition-timing-function: linear;*/
-    /*transition-timing-function: cubic-bezier(0.72, 0.25, 0.37, 0.97);*/
-    transition-timing-function: ease;
-    /*transition-delay: 1s;*/
-    opacity: 0;
+    transition: 
+        background 5s linear, 
+        scale 500ms ease-in-out,
+        box-shadow 0.3s, 
+        transform 0.3s ease;
 }
 
-section {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-}
-
-section:hover .pulser {
-    opacity: 1;
-}
 
 .pulser:hover {
     scale: 2;
@@ -44,14 +31,3 @@ body {
 
 }
 
-.pulser:first-child {
-    transition-delay: 0s;
-}
-
-.pulser:nth-child(2) {
-    transition-delay: 300ms;
-}
-
-.pulser:nth-child(3){
-    transition-delay: 600ms;
-}
