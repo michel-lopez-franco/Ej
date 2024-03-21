@@ -1,66 +1,47 @@
 
 
-.pulser {
-    width: 50px;
-    height: 50px;
-    background: #0AF;
-    border-radius: 100%;
-    position: relative;
-    animation: move;
-    animation-duration: 3s;
-}
-
-
-.pulser::after {
-    content: "hola";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #0AF;
-    border-radius: 100%;
-    z-index: -1;
-    animation: pulse;
+img {
+    width: 300px;
+    /*background-color: hsl(0, 0%, 90%);*/
+    animation-name: mover;
     animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    /*animation-iteration-count: 5;*/
-    animation-delay: 3s;
-    /*animation-iteration-count: infinite;*/
-    animation-iteration-count: 10;
+    animation-timing-function: linear;
+    animation-iteration-count: 3.5; /*4,infinite*/
+    animation-direction: alternate; /*normal, reverse, alternate,alternate-reverse */
+    animation-fill-mode: both; /*none, forwards (key final), backwards (key inicial), both*/
 
+    /*&:hover {
+
+        animation-play-state: paused;
+        opacity: .7;
+        filter: grayscale(100%);
+        cursor: pointer;
+    }*/
 }
 
-@keyframes pulse {
+/* alternativa usando &: dentro de image*/
+img:hover {
+    animation-play-state: paused;
+    opacity: .7;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+@keyframes mover {
     0% {
-        opacity: 0;
-    }
-    50% {
-        scale: 2;
-        opacity: .4;
+        transform: translateX(0);
     }
     100% {
-        opacity: .6;
+        transform: translateX(200px);
     }
 }
-
-@keyframes move {
-    from {
-        transform: translateY(0px);
-    }
-    to {
-        transform: translateY(100px);
-    }
-}
-
 
 
 body {
-    display: grid;
+    
     background: lightblue;
     place-content: center;
     min-height: 50vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
-
