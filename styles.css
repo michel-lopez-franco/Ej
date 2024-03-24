@@ -3,20 +3,23 @@
 img {
     width: 300px;
     /*background-color: hsl(0, 0%, 90%);*/
-    animation-name: mover;
+    /*animation-name: mover;
     animation-duration: 2s;
     animation-timing-function: linear;
-    animation-iteration-count: 3.5; /*4,infinite*/
-    animation-direction: alternate; /*normal, reverse, alternate,alternate-reverse */
-    animation-fill-mode: both; /*none, forwards (key final), backwards (key inicial), both*/
-
-    /*&:hover {
-
-        animation-play-state: paused;
-        opacity: .7;
-        filter: grayscale(100%);
-        cursor: pointer;
-    }*/
+    animation-iteration-count: 3.5; /4,infinite/
+    animation-direction: alternate; /normal, reverse, alternate,alternate-reverse /
+    animation-fill-mode: both; /none, forwards (key final), backwards (key inicial), both/
+    */
+    /*lo mismo que lo anterior */
+    /*animation: mover 2s linear 3.5 alternate both;*/
+    /* en discreto */
+    /*animation: mover 2s steps(10) infinite alternate both;*/
+    /*añadir mas de una animacion*/
+    animation: 
+        mover 2s linear 3 alternate both,
+        agrandar 2s linear 7s both,
+        agrandar 2s linear 10s reverse forwards,
+        mover 2s steps(10) 13s reverse forwards;
 }
 
 /* alternativa usando &: dentro de image*/
@@ -36,6 +39,24 @@ img:hover {
     }
 }
 
+@keyframes agrandar {
+    0% {
+        scale: 1;
+    }
+    25% {
+        scale: 1.5;
+    }
+    50% {
+        scale: 2;
+        }
+    75% {
+        scale: 1.5;
+    }
+    100% { 
+        scale: 2;
+        }
+
+}
 
 body {
     
@@ -43,5 +64,5 @@ body {
     place-content: center;
     min-height: 50vh;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+    padding-top: 100px;
 }
